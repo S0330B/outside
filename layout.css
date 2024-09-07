@@ -28,22 +28,22 @@
   justify-content: center;
   align-items: center;
 }
-.items-center {
+.align-center {
   align-content: center;
 }
-.items-end {
+.align-end {
   align-content: flex-end;
 }
-.items-start {
+.align-start {
   align-content: flex-start;
 }
-.items-between {
+.align-between {
   align-content: space-between;
 }
-.items-evenly {
+.align-evenly {
   align-content: space-evenly;
 }
-.items-between {
+.align-between {
   align-content: space-between;
 }
 .items-center {
@@ -232,7 +232,8 @@
 }
 
 .px-wrapper {
-  padding: 0 var(--wrapper);
+  padding-left: var(--wrapper);
+  padding-right: var(--wrapper);
 }
 .py-xxs {
   padding-top: var(--xxs);
@@ -513,11 +514,16 @@
 .right-most {
   right: 0;
 }
+
 .relative {
   position: relative;
 }
+
 .absolute {
   position: absolute;
+}
+.fixed {
+  position: fixed;
 }
 
 .overflow-hidden {
@@ -635,4 +641,16 @@
 }
 .col-12 {
   width: calc(8.33333% * 12);
+}
+
+.ratio-1 {
+  aspect-ratio: 1;
+}
+
+.ratio-3-4 {
+  aspect-ratio: 3 / 4;
+}
+
+.ratio-16-9 {
+  aspect-ratio: 16 / 9;
 }

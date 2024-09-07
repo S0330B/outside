@@ -1,3 +1,7 @@
+body {
+  font-family: var(--primary-font);
+}
+
 h1,
 h2,
 h3,
@@ -33,4 +37,57 @@ h6 {
 }
 .fs-heading {
   font-size: var(--fs-heading);
+}
+
+/* colors */
+.bg-primary {
+  background-color: var(--primary-color);
+}
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+.bg-white {
+  background-color: var(--white);
+}
+
+/* Text color utility classes */
+.text-primary {
+  color: var(--primary-color);
+}
+.text-secondary {
+  color: var(--secondary-color);
+}
+.text-white {
+  color: var(--white);
+}
+
+/*  limit lines */
+.two-lines {
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

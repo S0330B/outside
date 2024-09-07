@@ -19,4 +19,10 @@
   --fs-xxl: 1.865rem;
   --fs-xxxl: 2.238rem;
   --fs-heading: 2.688rem;
+  --primary-font: "Sora", sans-serif;
+
+  /* colors */
+  --primary-color: #065545;
+  --secondary-color: #febf58;
+  --white: white;
 }
