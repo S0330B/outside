@@ -4,18 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Outside</title>
+    <link rel="stylesheet" href="./vars.css">
+    <link rel="stylesheet" href="./layout.css">
+    <link rel="stylesheet" href="./theme.css">
+    <link rel="stylesheet" href="./styles.css">
   </head>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-  </style>
+
   <body>
-    <nav>
+    <nav class="px-wrapper flex justify-between items-center">
       <div class="logo">Lgoo</div>
-      <div class="nav-items">
+      <div class="nav-items flex items-center">
         <div class="nav-item">Home</div>
         <div class="nav-item">Home</div>
         <div class="nav-item">Home</div>
@@ -24,9 +22,9 @@
       </div>
     </nav>
     <main>
-      <section class="hero-section">
-        <article class="text-area">
-          <h1>Title</h1>
+      <section class="hero-section px-wrapper full-vh ">
+        <article class="text-area full-height flex column justify-center">
+          <h1 class="fs-heading">Title</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Consequuntur, doloremque.
@@ -36,15 +34,15 @@
           <img src="" alt="" />
         </article>
       </section>
-      <section class="features-section">
-        <h1>Title</h1>
+      <section class="features-section px-wrapper">
+        <h1 class="fs-xxl">Title</h1>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
           beatae tempora? Explicabo, labore itaque culpa necessitatibus eum,
           nesciunt ratione, ducimus quaerat suscipit perspiciatis porro. Vel,
           dignissimos! Repellat provident ratione numquam!
         </p>
-        <div class="features">
+        <div class="features flex">
           <article class="feature">
             <div class="feature-content">
                 <h3>Feature 1</h3>
@@ -79,13 +77,13 @@
               <img src="" alt="" />
           </article>
       </section>
-      <section class="product-section">
+      <section class="product-section px-wrapper">
         <h1>Title</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Consequuntur, doloremque.
         </p>
-        <div class="products">
+        <div class="products flex">
           <article class="product">
             <div class="product-img">
                 <img src="" alt="" />
