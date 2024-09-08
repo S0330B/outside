@@ -91,11 +91,11 @@ const loadProductData = () => {
                     </div>
                 </div>
                 <div class="product-content">
-                    <div class="arrow-button">
-                        <img src="${product.logo}" alt="${product.title}" class="image-width ratio-1-1"/>
-                    </div>
-                    <h3>${product.title}</h3>
-                    <p>${product.description}</p>
+                <h3>${product.title}</h3>
+                <p>${product.description}</p>
+                <div class="arrow-button">
+                    <img src="${product.logo}" alt="${product.title}" class="image-width ratio-1-1"/>
+                </div>
                 </div>
               </article>
     `;

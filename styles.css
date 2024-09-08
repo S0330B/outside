@@ -152,6 +152,14 @@ section.hero-section {
             }
           }
         }
+        .product-content {
+          .arrow-button {
+            img {
+              width: 20px;
+              aspect-ratio: 1;
+            }
+          }
+        }
       }
     }
   }
