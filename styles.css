@@ -134,7 +134,7 @@ section.hero-section {
   }
   @media screen and (max-width: 768px) {
     .products {
-      flex-direction: column;
+      flex-direction: column-reverse;
       .product {
         display: flex;
         flex-direction: row;
@@ -178,6 +178,10 @@ footer {
     .social-media-icon {
       height: 24px;
       aspect-ratio: 1/1;
+      &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
     }
   }
 

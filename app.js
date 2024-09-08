@@ -22,6 +22,7 @@ const FEATURE = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
     image: "./images/img2.png",
+    video: "./images/featureVideo/video.mp4",
   },
   {
     id: 3,
@@ -29,6 +30,7 @@ const FEATURE = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
     image: "./images/img3.png",
+    video: "./images/featureVideo/video.mp4",
   },
 ];
 const PRODUCTS = [
@@ -39,6 +41,7 @@ const PRODUCTS = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
     image: "./images/img1.png",
     logo: "./images/handshake.png",
+    video: "./images/featureVideo/video.mp4",
   },
   {
     id: 2,
@@ -46,7 +49,8 @@ const PRODUCTS = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
     image: "./images/img2.png",
-    logo: "./images/stocks.png",
+    logo: "./images/handshake.png",
+    video: "./images/featureVideo/video.mp4",
   },
   {
     id: 3,
@@ -54,7 +58,8 @@ const PRODUCTS = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
     image: "./images/img3.png",
-    logo: "./images/stocks.png",
+    logo: "./images/handshake.png",
+    video: "./images/featureVideo/video.mp4",
   },
 ];
 
@@ -73,7 +78,7 @@ const loadFeatureData = () => {
                     <div class="material-icons text-primary">arrow_forward</div>
                 </div>
               </div>
-              <div class="feature-image"><img src="${feature.image}" alt="${feature.title}" class="ratio-3-4 full-width"/></div>
+              <div class="feature-image"><img src="${feature.image}" alt="${feature.title}" class="ratio-3-4 full-width transform"/></div>
           </article>
     `;
   }).join("");
@@ -83,23 +88,73 @@ loadFeatureData();
 const loadProductData = () => {
   document.querySelector(".products").innerHTML = PRODUCTS.map((product) => {
     return `
-            <article class="product flex-1">
-                <div class="product-img relative flex justify-center items-center">
-                    <img src="${product.image}" alt="${product.title}" class="ratio-3-4 full-width"/>
-                    <div class="play-button absolute">
-                        <span class="material-icons">play_arrow</span>
+            <article class="product gap-md flex-1">
+            <div class="product-img relative flex justify-center items-center">
+            <div class="play-button absolute" onclick="playVideo('video-${product.id}')">
+                    <video id="video-${product.id}" src="${product.video}" alt="${product.title}" class="ratio-3-4 full-width" preload="metadata"></video>
+                        
                     </div>
                 </div>
-                <div class="product-content">
-                <h3>${product.title}</h3>
-                <p>${product.description}</p>
+                <div class="product-content flex column gap-md mt-4xl">
                 <div class="arrow-button">
                     <img src="${product.logo}" alt="${product.title}" class="image-width ratio-1-1"/>
                 </div>
+                <h3>${product.title}</h3>
+                <p>${product.description}</p>
                 </div>
               </article>
     `;
   }).join("");
 };
+
+const playVideo = (videoId) => {
+  const videos = document.querySelectorAll("video");
+  videos.forEach((video) => {
+    if (video.id === videoId) {
+      if (video.paused) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    } else {
+      video.pause();
+    }
+  });
+};
+
+document.addEventListener("mouseover", (event) => {
+  if (event.target.tagName === "VIDEO") {
+    const pauseButton = document.createElement("div");
+    pauseButton.className = "pause-button absolute";
+    pauseButton.innerHTML = '<span class="material-icons">pause</span>';
+    event.target.parentElement.appendChild(pauseButton);
+
+    pauseButton.onclick = () => {
+      event.target.pause();
+      pauseButton.remove();
+    };
+
+    event.target.onmouseleave = () => {
+      pauseButton.remove();
+    };
+  }
+});
+
+document.querySelectorAll("video").forEach((video) => {
+  video.addEventListener("pause", () => {
+    const playButton = video.parentElement.querySelector(".play-button");
+    playButton.style.display = "block";
+  });
+
+  video.addEventListener("play", () => {
+    const playButton = video.parentElement.querySelector(".play-button");
+    playButton.style.display = "none";
+  });
+
+  if (video.paused) {
+    const playButton = video.parentElement.querySelector(".play-button");
+    playButton.style.display = "block";
+  }
+});
 
 loadProductData();

@@ -8,6 +8,9 @@
   --lg: 32px;
   --xl: 40px;
   --xxl: 48px;
+  --3xl: 64px;
+  --4xl: 80px;
+
   --wrapper: 12vw;
   /* minor third typescaling */
   --fs-xxs: 0.625rem;

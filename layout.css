@@ -302,6 +302,9 @@
 .mt-xl {
   margin-top: var(--xl);
 }
+.mt-4xl {
+  margin-top: var(--4xl);
+}
 .mt-none {
   margin-top: 0 !important;
 }
@@ -657,4 +660,12 @@
 
 .ratio-16-9 {
   aspect-ratio: 16 / 9;
+}
+
+.transform {
+  &:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
+    cursor: pointer;
+  }
 }
