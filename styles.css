@@ -94,6 +94,12 @@ section.hero-section {
             border: none;
           }
         }
+        .feature-image {
+          img {
+            width: var(--lg);
+            aspect-ratio: 1/1;
+          }
+        }
       }
     }
   }

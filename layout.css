@@ -428,6 +428,7 @@
   display: flex;
   flex-wrap: wrap;
 }
+
 .full-width {
   width: 100%;
 }
@@ -448,6 +449,9 @@
 }
 .half-width {
   width: 50%;
+}
+.parahraph-width {
+  width: 75%;
 }
 .auto-scroll {
   overflow: auto;

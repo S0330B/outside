@@ -20,9 +20,12 @@
   --fs-xxxl: 2.238rem;
   --fs-heading: 2.688rem;
   --primary-font: "Sora", sans-serif;
+  --secondary-font: "Space Mono", monospace;
 
   /* colors */
   --primary-color: #065545;
   --secondary-color: #febf58;
+  --tertiary-color: #012a22;
+
   --white: white;
 }

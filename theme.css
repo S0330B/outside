@@ -38,7 +38,22 @@ h6 {
 .fs-heading {
   font-size: var(--fs-heading);
 }
-
+/*Font weights*/
+.fw-light {
+  font-weight: 300;
+}
+.fw-regular {
+  font-weight: 400;
+}
+.fw-medium {
+  font-weight: 500;
+}
+.fw-semibold {
+  font-weight: 600;
+}
+.fw-bold {
+  font-weight: 700;
+}
 /* colors */
 .bg-primary {
   background-color: var(--primary-color);
@@ -57,8 +72,17 @@ h6 {
 .text-secondary {
   color: var(--secondary-color);
 }
+.text-tertiary {
+  color: var(--tertiary-color);
+}
 .text-white {
   color: var(--white);
+}
+
+/* font-family */
+
+.font-secondary {
+  font-family: var(--secondary-font);
 }
 
 /*  limit lines */
