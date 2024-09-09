@@ -1,13 +1,3 @@
-document.querySelector(".menu").addEventListener("click", () => {
-  document.querySelector(".nav-items").style.animation =
-    "fadeInRight .3s linear";
-  document.querySelector(".nav-items").style.display = "block";
-});
-
-document.querySelector(".close-button").addEventListener("click", () => {
-  document.querySelector(".nav-items").style.animation = "unset";
-  document.querySelector(".nav-items").style.display = "none";
-});
 const FEATURE = [
   {
     id: 1,
@@ -62,6 +52,16 @@ const PRODUCTS = [
     video: "./images/featureVideo/video.mp4",
   },
 ];
+document.querySelector(".menu").addEventListener("click", () => {
+  document.querySelector(".nav-items").style.animation =
+    "fadeInRight .3s linear";
+  document.querySelector(".nav-items").style.display = "block";
+});
+
+document.querySelector(".close-button").addEventListener("click", () => {
+  document.querySelector(".nav-items").style.animation = "unset";
+  document.querySelector(".nav-items").style.display = "none";
+});
 
 const loadFeatureData = () => {
   document.querySelector(".features").innerHTML = FEATURE.map((feature) => {
@@ -90,9 +90,9 @@ const loadProductData = () => {
     return `
             <article class="product gap-md flex-1">
             <div class="product-img relative flex justify-center items-center">
+            <video id="video-${product.id}" src="${product.video}" alt="${product.title}" class="full-width" preload="metadata"></video>
             <div class="play-button absolute" onclick="playVideo('video-${product.id}')">
-                    <video id="video-${product.id}" src="${product.video}" alt="${product.title}" class="ratio-3-4 full-width" preload="metadata"></video>
-                        
+                    <span class="material-icons">play_arrow</span>
                     </div>
                 </div>
                 <div class="product-content flex column gap-md mt-4xl">

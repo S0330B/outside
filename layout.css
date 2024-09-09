@@ -2,6 +2,10 @@
 .d-none {
   display: none;
 }
+
+.d-block {
+  display: block;
+}
 .flex {
   display: flex;
 }
@@ -92,6 +96,9 @@
 }
 .gap-xl {
   gap: var(--xl);
+}
+.gap-5xl {
+  gap: var(--5xl);
 }
 .gap-none {
   gap: 0 !important;

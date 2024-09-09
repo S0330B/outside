@@ -70,6 +70,17 @@ nav {
 section.hero-section {
   height: 100vh;
   padding: 0 12vw;
+  @media screen and (max-width: 768px) {
+    .text-area {
+      .hero-title {
+        font-size: var(--md);
+      }
+      .hero-description {
+        font-size: var(--sm);
+        width: 100%;
+      }
+    }
+  }
 }
 
 .features-section {
